@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigaion"
+    app:startDestination="@id/topHeadLineFragment">
+
+    <fragment
+        android:id="@+id/topHeadLineFragment"
+        android:name="com.yethiha.newsapp_kt.fragement.TopHeadLineFragment"
+        android:label="fragment_topheadline"
+        tools:layout="@layout/fragment_topheadline" >
+        <action
+            android:id="@+id/action_topHeadLineFragment_to_twoFragment"
+            app:destination="@id/twoFragment"
+            app:popUpTo="@id/topHeadLineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/twoFragment"
+        android:name="com.yethiha.newsapp_kt.fragement.twoFragment"
+        android:label="fragment_two"
+        tools:layout="@layout/fragment_two" >
+        <argument
+            android:name="message"
+            app:argType="string"
+            android:defaultValue="default" />
+        <argument
+            android:name="image"
+            app:argType="string"
+            android:defaultValue="default" />
+    </fragment>
+</navigation>
